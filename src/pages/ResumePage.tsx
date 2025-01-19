@@ -293,6 +293,7 @@ const ResumePage = () => {
                       ))}
                     </div>
                   </div>
+                  
 
                   <div className="glass p-6 rounded-lg border border-cyan/10 hover:border-cyan/30 transition-all duration-300">
                     <div className="flex justify-between items-start mb-3 flex-wrap gap-2">
