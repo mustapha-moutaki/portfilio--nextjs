@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 4%;
+    --foreground: 186 100% 90%;
+
+    --card: 222 47% 6%;
+    --card-foreground: 186 100% 90%;
+
+    --popover: 222 47% 4%;
+    --popover-foreground: 186 100% 90%;
+
+    --primary: 186 100% 53%;
+    --primary-foreground: 186 90% 10%;
+
+    --secondary: 186 70% 25%;
+    --secondary-foreground: 186 100% 90%;
+
+    --muted: 222 47% 10%;
+    --muted-foreground: 186 70% 80%;
+
+    --accent: 186 80% 30%;
+    --accent-foreground: 186 100% 90%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 186 100% 98%;
+
+    --border: 186 30% 20%;
+    --input: 186 30% 20%;
+    --ring: 186 100% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 186 100% 90%;
+    --sidebar-primary: 186 100% 53%;
+    --sidebar-primary-foreground: 222 47% 8%;
+    --sidebar-accent: 222 47% 12%;
+    --sidebar-accent-foreground: 186 100% 90%;
+    --sidebar-border: 186 30% 20%;
+    --sidebar-ring: 186 100% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-cyan/30 selection:text-white;
+  }
+
+  .text-gradient-cyan {
+    @apply bg-gradient-to-b from-cyan-light via-cyan to-cyan-dark bg-clip-text text-transparent;
+  }
+
+  .bg-mesh {
+    background-image: radial-gradient(rgba(0, 229, 229, 0.1) 1px, transparent 1px),
+                    radial-gradient(rgba(0, 229, 229, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+  }
+
+  .glass {
+    @apply bg-dark-light/40 backdrop-blur-md border border-white/10 rounded-lg;
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-light/40;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyan/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cyan;
+  }
+}
