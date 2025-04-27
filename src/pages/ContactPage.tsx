@@ -215,15 +215,15 @@ const ContactPage = () => {
                 </p>
                 
                 <div className="grid grid-cols-3 gap-4">
-                  <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10 w-full">
-                    GitHub
-                  </Button>
-                  <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10 w-full">
-                    LinkedIn
-                  </Button>
-                  <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10 w-full">
-                    Twitter
-                  </Button>
+                <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10 w-full" 
+        href="https://github.com/mustapha-moutaki">
+  GitHub
+</Button>
+<Button variant="outline" className="border-cyan/20 hover:bg-cyan/10 w-full"
+        href="https://www.linkedin.com/in/mustapha-moutaki/">
+  LinkedIn
+</Button>
+
                 </div>
               </div>
             </div>

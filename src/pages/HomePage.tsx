@@ -82,8 +82,7 @@ const HomePage = () => {
           
           <div className="space-y-4">
             <div className="text-gradient-cyan text-5xl md:text-6xl lg:text-8xl font-bold mb-2">Developer</div>
-            <div className="text-4xl md:text-5xl lg:text-7xl font-bold text-secondary mb-2">Designer</div>
-            <div className="text-3xl md:text-4xl lg:text-6xl font-bold text-muted-foreground">Creator</div>
+            
           </div>
           
           <div ref={subHeadingRef} className="mt-12 max-w-lg mx-auto text-lg text-muted-foreground">

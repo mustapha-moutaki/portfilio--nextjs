@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import { Download } from "lucide-react";
-
+import Link from "next/link";
 const ResumePage = () => {
   const headingRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -47,9 +47,11 @@ const ResumePage = () => {
               <h1 className="text-5xl font-bold mb-2 text-gradient-cyan">Resume</h1>
               <h2 className="text-3xl text-muted-foreground">Resume</h2>
             </div>
-            <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10">
-              <Download className="mr-2 h-4 w-4" /> Download PDF
-            </Button>
+            <a href=".//public/MustaphaResumeFr.pdf" download="Mustapha_Moutaki_Resume.pdf" style={{textDecoration: 'none'}}>
+  <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10">
+    <Download className="mr-2 h-4 w-4" /> Download PDF
+  </Button>
+</a>
           </div>
 
           <div ref={contentRef} className="glass p-8 rounded-xl">
@@ -111,69 +113,77 @@ const ResumePage = () => {
               </section>
 
               <section>
-                <h3 className="text-2xl font-bold mb-4">Experience</h3>
-                <div className="space-y-6">
-                  <div>
-                    <div className="flex justify-between items-start mb-1 flex-wrap gap-2">
-                      <h4 className="font-bold">Lead Web Developer</h4>
-                      <p className="text-sm text-cyan">Jan 2021 - Present</p>
-                    </div>
-                    <p className="text-muted-foreground/80 mb-2">ACME Technologies, New York, NY</p>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                      <li>Lead a team of 5 developers to build scalable web applications</li>
-                      <li>Implemented CI/CD pipelines that reduced deployment time by 40%</li>
-                      <li>Architected microservices that improved system reliability</li>
-                    </ul>
-                  </div>
+  <h3 className="text-2xl font-bold mb-4">Experience</h3>
+  <div className="space-y-6">
+    <div>
+      <div className="flex justify-between items-start mb-1 flex-wrap gap-2">
+        <h4 className="font-bold">Full-Stack Developer</h4>
+        <p className="text-sm text-cyan">Oct 2024 - Present</p>
+      </div>
+      <p className="text-muted-foreground/80 mb-2">YOUCODE | UM6P | Youssoufia</p>
+      <ul className="list-disc list-inside text-muted-foreground space-y-1">
+        <li>Designed and implemented course catalog, search features, and role management for students and teachers</li>
+        <li>Created tools for teachers to add, manage, and track courses, with statistics and notifications</li>
+        <li>Developed an admin panel for user management, content control, and global course statistics</li>
+      </ul>
+    </div>
 
-                  <div>
-                    <div className="flex justify-between items-start mb-1 flex-wrap gap-2">
-                      <h4 className="font-bold">Full Stack Developer</h4>
-                      <p className="text-sm text-cyan">Mar 2018 - Dec 2020</p>
-                    </div>
-                    <p className="text-muted-foreground/80 mb-2">TechStart Inc., Boston, MA</p>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                      <li>Developed and maintained multiple client-facing applications</li>
-                      <li>Optimized database queries that improved performance by 35%</li>
-                      <li>Implemented responsive designs that enhanced mobile user experience</li>
-                    </ul>
-                  </div>
+    <div>
+      <div className="flex justify-between items-start mb-1 flex-wrap gap-2">
+        <h4 className="font-bold">PHP Developer - Eventhub Project</h4>
+        <p className="text-sm text-cyan">Dec 2024 - Jan 2025</p>
+      </div>
+      <p className="text-muted-foreground/80 mb-2">Personal Project</p>
+      <ul className="list-disc list-inside text-muted-foreground space-y-1">
+        <li>Developed an Event Management System (Eventbrite clone) using PHP MVC, PostgreSQL, and AJAX</li>
+        <li>Implemented secure authentication, role-based access control, and real-time dashboards</li>
+        <li>Ensured security with CSRF, XSS, and SQL injection protection</li>
+      </ul>
+    </div>
 
-                  <div>
-                    <div className="flex justify-between items-start mb-1 flex-wrap gap-2">
-                      <h4 className="font-bold">Frontend Developer</h4>
-                      <p className="text-sm text-cyan">Jun 2016 - Feb 2018</p>
-                    </div>
-                    <p className="text-muted-foreground/80 mb-2">WebDev Solutions, Seattle, WA</p>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                      <li>Built interactive UI components using React and Redux</li>
-                      <li>Collaborated with designers to implement pixel-perfect layouts</li>
-                      <li>Reduced bundle size by 30% through code splitting techniques</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
+    <div>
+      <div className="flex justify-between items-start mb-1 flex-wrap gap-2">
+        <h4 className="font-bold">Frontend Developer - Task Management App</h4>
+        <p className="text-sm text-cyan">Aug 2023 - May 2024</p>
+      </div>
+      <p className="text-muted-foreground/80 mb-2">Academic Project</p>
+      <ul className="list-disc list-inside text-muted-foreground space-y-1">
+        <li>Developed task creation and management with dynamic status updates</li>
+        <li>Added filtering options to sort tasks by status and criteria</li>
+        <li>Integrated local storage for task persistence and implemented drag-and-drop functionality</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-              <section>
-                <h3 className="text-2xl font-bold mb-4">Education</h3>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between items-start mb-1">
-                      <h4 className="font-bold">UNIVERSITY OF DELAWARE</h4>
-                      <p className="text-sm text-cyan">2020 - 2024</p>
-                    </div>
-                    <p className="text-muted-foreground">Master's Degree, Computer Science</p>
-                  </div>
+<section>
+  <h3 className="text-2xl font-bold mb-4">Education</h3>
+  <div className="space-y-4">
+    <div>
+      <div className="flex justify-between items-start mb-1">
+        <h4 className="font-bold">YOUCODE | UM6P</h4>
+        <p className="text-sm text-cyan">2022 - 2023</p>
+      </div>
+      <p className="text-muted-foreground">Full-stack Developer Training, Youssoufia</p>
+    </div>
 
-                  <div>
-                    <div className="flex justify-between items-start mb-1">
-                      <h4 className="font-bold">R.V. COLLEGE OF ENGINEERING</h4>
-                      <p className="text-sm text-cyan">2016 - 2020</p>
-                    </div>
-                    <p className="text-muted-foreground">Bachelor's Degree, Software Engineering</p>
-                  </div>
-                </div>
-              </section>
+    <div>
+      <div className="flex justify-between items-start mb-1">
+        <h4 className="font-bold">IBN ZOHR UNIVERSITY</h4>
+        <p className="text-sm text-cyan">2023 - 2024</p>
+      </div>
+      <p className="text-muted-foreground">Physics — Electronics and Systems, Agadir</p>
+    </div>
+
+    <div>
+      <div className="flex justify-between items-start mb-1">
+        <h4 className="font-bold">IDRISS THE SECOND HIGH SCHOOL</h4>
+        <p className="text-sm text-cyan">Before 2022</p>
+      </div>
+      <p className="text-muted-foreground">Bachelor of Science in Physics and Chemistry, Tafraout</p>
+    </div>
+  </div>
+</section>
             </div>
           </div>
         </div>
