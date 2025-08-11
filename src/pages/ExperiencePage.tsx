@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 gsap.registerPlugin(ScrollTrigger);
 
 interface Experience {
-  id: string;
+  // id: string;// we will use index
   role: string;
   company: string;
   location: string;
@@ -25,7 +25,23 @@ const ExperiencePage = () => {
 
   const experiences: Experience[] = [
     {
-      id: "01",
+      // id: "01",
+      role: "FRONT-END DEVELOPER",
+      company: "Digital-partinership Group -dpg",
+      location: "Mohammed Zerqtouni Street, Casablanca, Morocco",
+      startDate: "12/ 05 /2025",
+      endDate: "12/ 07 /2025",
+      description: [
+        "Developed and maintained web applications using HTML, CSS, JavaScript, and Laravel for full-stack solutions.",
+        "Collaborated with a team to create scalable, high-performance applications.",
+        "Worked with clients to understand requirements and deliver projects on time.",
+        "Provided training and mentorship to junior developers.",
+        "Participated in agile workflows and conducted sprint planning and retrospectives."
+      ],
+      skills: ["Next.js", "Laravel", "Full-Stack Development", "Team Collaboration", "Agile"]
+    },
+    {
+    
       role: "FULL-STACK DEVELOPER",
       company: "YOUCODE",
       location: "POWERED BY SIMPLON, YOUSSOUFIA",
@@ -38,51 +54,9 @@ const ExperiencePage = () => {
         "Provided training and mentorship to junior developers.",
         "Participated in agile workflows and conducted sprint planning and retrospectives."
       ],
-      skills: ["Laravel", "PHP", "JavaScript", "Full-Stack Development", "Team Collaboration", "Agile"]
+      skills: ["Laravel", "PHP", "JavaScript", "Full-Stack Development", "Team Collaboration", "Agile", '.  .  .']
     },
-    {
-      id: "02",
-      role: "FRONT-END DEVELOPER",
-      company: "GREENCHIP 2.0",
-      location: "POWERED BY SIMPLON - OUJDA",
-      startDate: "JUL 2021",
-      endDate: "JUN 2022",
-      description: [
-        "Designed and developed responsive front-end interfaces using HTML, CSS, JavaScript, and React.js.",
-        "Collaborated with back-end developers to integrate APIs and improve application performance.",
-        "Implemented real-time data updates using AJAX and ensured cross-browser compatibility.",
-        "Optimized website speed and performance, ensuring smooth user experiences."
-      ],
-      skills: ["React.js", "JavaScript", "HTML", "CSS", "AJAX", "Responsive Design"]
-    },
-    {
-      id: "03",
-      role: "SOFTWARE DEVELOPER",
-      company: "BIDWIZ",
-      location: "MARRAKECH | REMOTE",
-      startDate: "SEPT 2020",
-      endDate: "NOV 2020",
-      description: [
-        "Planned and developed user-friendly web interfaces using Angular and TypeScript.",
-        "Integrated third-party APIs to enhance functionality and improve user experiences.",
-        "Conducted comprehensive testing to ensure application stability and performance."
-      ],
-      skills: ["Angular", "TypeScript", "API Integration", "UI/UX Design", "Testing"]
-    },
-    {
-      id: "04",
-      role: "FRONTEND WEB DEVELOPER",
-      company: "STORAPIDO",
-      location: "CASABLANCA | REMOTE",
-      startDate: "APR 2020",
-      endDate: "SEPT 2020",
-      description: [
-        "Optimized existing websites for improved performance and cross-browser compatibility.",
-        "Built front-end solutions according to client specifications using HTML, CSS, and JavaScript.",
-        "Collaborated with back-end teams to integrate APIs and ensure seamless user interactions."
-      ],
-      skills: ["HTML", "CSS", "JavaScript", "Client Communication", "Frontend Optimization"]
-    }
+    
   ];
   
 
@@ -129,8 +103,8 @@ const ExperiencePage = () => {
           </div>
 
           <div ref={timelineRef} className="relative space-y-12 pl-8 before:absolute before:left-0 before:top-2 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-cyan before:via-cyan/50 before:to-transparent">
-            {experiences.map((experience) => (
-              <div key={experience.id} className="relative">
+            {experiences.map((experience, index) => (
+              <div key={index} className="relative">
                 <div className="absolute left-[-33px] top-0 h-6 w-6 rounded-full bg-dark border-2 border-cyan flex items-center justify-center">
                   <div className="h-2 w-2 rounded-full bg-cyan animate-pulse-cyan"></div>
                 </div>
@@ -138,7 +112,7 @@ const ExperiencePage = () => {
                 <Card className="glass border-cyan/10 overflow-hidden">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-start mb-6 flex-wrap gap-4">
-                      <div className="text-sm text-cyan">{experience.id}</div>
+                      <div className="text-sm text-cyan">{index+1}</div>
                       <div className="text-sm text-muted-foreground">
                         {experience.startDate} - {experience.endDate}
                       </div>
