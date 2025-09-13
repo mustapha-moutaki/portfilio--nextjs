@@ -177,9 +177,9 @@ const AboutPage = () => {
                 <div className="glass w-full aspect-square relative overflow-hidden rounded-lg">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan/30 via-transparent to-transparent"></div>
                   <div className="absolute inset-0 flex items-center justify-center text-8xl text-muted-foreground/20 font-mono">
-                 {/* <img src="/public/images/mustapha.webp" alt="profile picture" /> */}
+                 <img src="/public/images/mustapha.webp" alt="profile picture" />
                  {/* <input type="file" src="/public/MustaphaResumeEng.pdf" /> */}
-                 <iframe src="/public/MustaphaResumeEng.pdf" width="200%" height="100%"></iframe>
+                 {/* <iframe src="/public/MustaphaResumeEng.pdf" width="200%" height="100%"></iframe> */}
                   </div>
                 </div>
               </div>

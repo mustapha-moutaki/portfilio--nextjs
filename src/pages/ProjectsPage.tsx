@@ -11,7 +11,7 @@ import { ExternalLink, Github } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 interface Project {
-  id: string;
+  // id: string;// we will  use index to fitch them 
   title: string;
   description: string;
   startDate: string;
@@ -27,7 +27,17 @@ const ProjectsPage = () => {
 
   const projects: Project[] = [
     {
-      id: "01",
+      // id: "01",
+      title: "Medmanager(Hospital management system & booking platforme",
+      description: "DEVELOPED AN EVENT MANAGEMENT SYSTEM USING PHP MVC - laravel, MySQL, AND AJAX FOR EVENT CREATION, TICKET BOOKING, AND PAYPAL PAYMENT INTEGRATION.",
+      startDate: "May 2025",
+      endDate: "July 2025",
+      skills: ["PHP", "MySQL", "AJAX", "MVC", "PayPal Integration", "Security"],
+      demoLink: "#",
+      repoLink: "#"
+    },
+    {
+      // id: "01",
       title: "Event Management System (Eventbrite clone)",
       description: "DEVELOPED AN EVENT MANAGEMENT SYSTEM USING PHP MVC, POSTGRESQL, AND AJAX FOR EVENT CREATION, TICKET BOOKING, AND PAYPAL PAYMENT INTEGRATION.",
       startDate: "Oct 2024",
@@ -37,7 +47,7 @@ const ProjectsPage = () => {
       repoLink: "#"
     },
     {
-      id: "02",
+      // id: "02",
       title: "Online Learning Platform",
       description: "DESIGNED AND IMPLEMENTED A COURSE CATALOG, SEARCH FEATURES, AND ROLE MANAGEMENT FOR STUDENTS AND TEACHERS, INCLUDING A FULL ADMIN PANEL.",
       startDate: "Dec 2024",
@@ -47,7 +57,7 @@ const ProjectsPage = () => {
       repoLink: "#"
     },
     {
-      id: "03",
+      // id: "03",
       title: "Task Management Web Application",
       description: "DEVELOPED A TASK MANAGEMENT SYSTEM WITH DYNAMIC STATUS UPDATES, FILTERING, LOCAL STORAGE INTEGRATION, AND DRAG-AND-DROP FUNCTIONALITY.",
       startDate: "Oct 2024",
@@ -57,7 +67,7 @@ const ProjectsPage = () => {
       repoLink: "#"
     },
     {
-      id: "04",
+      // id: "04",
       title: "E-Commerce Platform with NextJS",
       description: "BUILT A SCALABLE E-COMMERCE SOLUTION WITH STRIPE INTEGRATION AND DYNAMIC PRODUCT MANAGEMENT USING NEXTJS AND TAILWIND CSS.",
       startDate: "Apr 2022",
@@ -67,7 +77,7 @@ const ProjectsPage = () => {
       repoLink: "#"
     },
     {
-      id: "05",
+      // id: "05",
       title: "AI-Powered Content Generator",
       description: "CREATED A WEB TOOL USING MACHINE LEARNING TO GENERATE CUSTOM CONTENT BASED ON USER PREFERENCES.",
       startDate: "Jan 2022",

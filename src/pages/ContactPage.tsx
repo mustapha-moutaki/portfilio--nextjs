@@ -51,7 +51,6 @@ const ContactPage = () => {
     
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    
     console.log(values);
     toast.success("Message sent successfully! I'll get back to you soon.");
     
