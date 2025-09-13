@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { 
   Home, User, Briefcase, FolderOpen, Mail, FileText, 
-  ChevronLeft, ChevronRight, Linkedin, Github, Twitter 
+  ChevronLeft, ChevronRight, Linkedin, Github, Instagram 
 } from "lucide-react";
 
 const Sidebar = () => {
@@ -15,15 +15,15 @@ const Sidebar = () => {
     { name: "Home", path: "/", icon: Home },
     { name: "About", path: "/about", icon: User },
     { name: "Experience", path: "/experience", icon: Briefcase },
-    { name: "Projects", path: "/projects", icon: FolderOpen },
-    { name: "Contact", path: "/contact", icon: Mail },
+    { name: "Projects-not complete ", path: "/projects", icon: FolderOpen },
+    { name: "Contact- not complete", path: "/contact", icon: Mail },
     { name: "Resume", path: "/resume", icon: FileText },
   ];
   
   const socialItems = [
-    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
-    { name: "GitHub", icon: Github, href: "https://github.com" },
-    { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
+    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/mustapha-moutaki" },
+    { name: "GitHub", icon: Github, href: "https://github.com/mustapha-moutaki" },
+    { name: "Twitter", icon: Instagram, href: "https://twitter.com" },
   ];
 
   return (

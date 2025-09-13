@@ -202,7 +202,7 @@ const ContactPage = () => {
                     <MapPin className="h-6 w-6 text-cyan mr-4 mt-1" />
                     <div>
                       <h4 className="font-bold mb-1">Location</h4>
-                      <p className="text-muted-foreground">07-Lhed,Youssoufia, morocco</p>
+                      <p className="text-muted-foreground">Morocco, but i can be anywhere like ⚡</p>
                     </div>
                   </div>
                 </div>
@@ -216,13 +216,13 @@ const ContactPage = () => {
                 
                 <div className="grid grid-cols-3 gap-4">
                 <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10 w-full" 
-        href="https://github.com/mustapha-moutaki">
-  GitHub
-</Button>
-<Button variant="outline" className="border-cyan/20 hover:bg-cyan/10 w-full"
-        href="https://www.linkedin.com/in/mustapha-moutaki/">
-  LinkedIn
-</Button>
+                    href="https://github.com/mustapha-moutaki">
+              GitHub
+            </Button>
+            <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10 w-full"
+                    href="https://www.linkedin.com/in/mustapha-moutaki/">
+              LinkedIn
+            </Button>
 
                 </div>
               </div>

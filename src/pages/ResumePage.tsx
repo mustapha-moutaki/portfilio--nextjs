@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import { Download } from "lucide-react";
-import Link from "next/link";
+// import Link from "next/link";
 const ResumePage = () => {
   const headingRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -47,11 +47,20 @@ const ResumePage = () => {
               <h1 className="text-5xl font-bold mb-2 text-gradient-cyan">Resume</h1>
               <h2 className="text-3xl text-muted-foreground">Resume</h2>
             </div>
-            <a href=".//public/MustaphaResumeFr.pdf" download="Mustapha_Moutaki_Resume.pdf" style={{textDecoration: 'none'}}>
-  <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10">
-    <Download className="mr-2 h-4 w-4" /> Download PDF
-  </Button>
-</a>
+            <div>
+               <a href=".//public/MustaphaResumeEng.pdf" download="Mustapha_Moutaki_ResumeEng.pdf" style={{textDecoration: 'none'}}>
+                <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10">
+                  <Download className="mr-2 h-4 w-4" /> Download PDF-En
+                </Button>
+              </a>
+
+                 <a href=".//public/MustaphaResumeFr.pdf" download="Mustapha_Moutaki_Resume.pdf" style={{textDecoration: 'none'}}>
+                  <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10">
+                    <Download className="mr-2 h-4 w-4" /> Download PDF-fr
+                  </Button>
+                </a>
+            </div>
+           
           </div>
 
           <div ref={contentRef} className="glass p-8 rounded-xl">
@@ -73,10 +82,10 @@ const ResumePage = () => {
                     <h4 className="font-bold mb-2 text-cyan">Frontend</h4>
                     <ul className="list-disc list-inside text-muted-foreground space-y-1">
                     <li>React, Next.js <s>Vue.js</s></li>
-                  <li><s>TypeScript/JavaScript</s></li>
+                  <li><s>TypeScript</s>/JavaScript</li>
                     <li>HTML5/CSS3, <s>SASS</s> Tailwind</li>
                     <li><s>Redux</s> Context API</li>
-                    <li>GraphQL <s>REST API integration</s></li>
+                    <li>GraphQL/REST API integration</li>
                     </ul>
                   </div>
                   <div>
@@ -85,6 +94,7 @@ const ResumePage = () => {
                       <li><s>Node.js, Express</s></li>
                       
                       <li>SQL  databases</li>
+                      <li>Php/Laravel</li>
                       <li>RESTful API design</li>
                       <li>Authentication & Authorization</li>
                     </ul>
@@ -156,34 +166,34 @@ const ResumePage = () => {
   </div>
 </section>
 
-<section>
-  <h3 className="text-2xl font-bold mb-4">Education</h3>
-  <div className="space-y-4">
-    <div>
-      <div className="flex justify-between items-start mb-1">
-        <h4 className="font-bold">YOUCODE | UM6P</h4>
-        <p className="text-sm text-cyan">2022 - 2023</p>
-      </div>
-      <p className="text-muted-foreground">Full-stack Developer Training, Youssoufia</p>
-    </div>
+              <section>
+                <h3 className="text-2xl font-bold mb-4">Education</h3>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex justify-between items-start mb-1">
+                      <h4 className="font-bold">YOUCODE | UM6P</h4>
+                      <p className="text-sm text-cyan">2022 - 2023</p>
+                    </div>
+                    <p className="text-muted-foreground">Full-stack Developer Training, Youssoufia</p>
+                  </div>
 
-    <div>
-      <div className="flex justify-between items-start mb-1">
-        <h4 className="font-bold">IBN ZOHR UNIVERSITY</h4>
-        <p className="text-sm text-cyan">2023 - 2024</p>
-      </div>
-      <p className="text-muted-foreground">Physics — Electronics and Systems, Agadir</p>
-    </div>
+                  <div>
+                    <div className="flex justify-between items-start mb-1">
+                      <h4 className="font-bold">IBN ZOHR UNIVERSITY</h4>
+                      <p className="text-sm text-cyan">2023 - 2024</p>
+                    </div>
+                    <p className="text-muted-foreground">Physics — Electronics and Systems, Agadir</p>
+                  </div>
 
-    <div>
-      <div className="flex justify-between items-start mb-1">
-        <h4 className="font-bold">IDRISS THE SECOND HIGH SCHOOL</h4>
-        <p className="text-sm text-cyan">Before 2022</p>
-      </div>
-      <p className="text-muted-foreground">Bachelor of Science in Physics and Chemistry, Tafraout</p>
-    </div>
-  </div>
-</section>
+                  <div>
+                    <div className="flex justify-between items-start mb-1">
+                      <h4 className="font-bold">IDRISS THE SECOND HIGH SCHOOL</h4>
+                      <p className="text-sm text-cyan">Before 2022</p>
+                    </div>
+                    <p className="text-muted-foreground">Bachelor of Science in Physics and Chemistry, Tafraout</p>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
