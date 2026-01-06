@@ -14,6 +14,8 @@ const HomePage = () => {
   const subHeadingRef = useRef<HTMLDivElement>(null);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null);
 
+
+  
   useEffect(() => {
     const tl = gsap.timeline();
 
