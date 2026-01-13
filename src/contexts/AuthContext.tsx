@@ -41,6 +41,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const login = async (email: string, password: string) => {
     // For demo purposes, we'll use a mock login
+    
     // In production, this would call an API endpoint
     if (email === "admin@mustapha.com" && password === "password") {
       const mockUser = {
