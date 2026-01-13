@@ -180,6 +180,7 @@ const ParticleBackground = () => {
         cancelAnimationFrame(frameIdRef.current);
       }
 
+      
       if (rendererRef.current && rendererRef.current.domElement) {
         container.removeChild(rendererRef.current.domElement);
       }
