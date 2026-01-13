@@ -50,6 +50,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         role: "admin" as const,
       };
       
+
+      
       setUser(mockUser);
       localStorage.setItem("user", JSON.stringify(mockUser));
       return Promise.resolve();
