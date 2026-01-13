@@ -64,6 +64,8 @@ const ParticleBackground = () => {
       new THREE.BufferAttribute(colors, 3)
     );
 
+
+    
     const particlesMaterial = new THREE.PointsMaterial({
       size: 0.1,
       sizeAttenuation: true,
@@ -77,6 +79,8 @@ const ParticleBackground = () => {
     const particles = new THREE.Points(particlesGeometry, particlesMaterial);
     scene.add(particles);
     particlesRef.current = particles;
+
+
 
     // Wave points
     const generateWavePoints = () => {
