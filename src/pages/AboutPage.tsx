@@ -35,7 +35,7 @@ const AboutPage = () => {
       id: "01",
       school: "YOUCODE | UM6P | Youssoufia",
       degree: "Full-Stack Development Program",
-      field: "Web Development",
+      field: "Web Development & Digital Conception",
       years: "Oct 2022 – May 2023",
     },
     {
@@ -170,7 +170,7 @@ const AboutPage = () => {
                 <h1 className="text-5xl font-bold mb-2 text-gradient-cyan">
                   About
                 </h1>
-                <h2 className="text-3xl text-muted-foreground mb-6">About</h2>
+                <h2 className="text-3xl text-muted-foreground mb-6">Know me</h2>
               </div>
 
               <div className="mb-8">
@@ -199,12 +199,9 @@ const AboutPage = () => {
                 className="prose prose-invert max-w-none mb-16"
               >
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I'm Mustapha MOUTAKI, a passionate Full Stack Developer with
-                  1.5 years of experience in building smart, scalable digital
-                  solutions. Specializing in React, PHP, and modern web
-                  technologies, I blend technical precision with a strong sense
-                  of design to craft seamless and performance-driven user
-                  experiences.
+                 I'm Mustapha MOUTAKI, a passionate Full Stack Developer with more than 2 years of experience building robust, scalable, and high-performance applications.
+                I specialize in Java (Spring Boot) on the backend and Angular on the frontend, delivering clean architectures, secure APIs, and responsive user interfaces.
+                I focus on writing maintainable code, applying best practices, and crafting efficient digital solutions that solve real-world problems.
                 </p>
 
                 <p className="text-lg text-muted-foreground leading-relaxed mt-4">
@@ -251,38 +248,44 @@ const AboutPage = () => {
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-bold mb-8 text-gradient-cyan">
-                  Achievements & Certifications
-                </h3>
-                <div ref={achievementsRef} className="space-y-6">
-                  {achievements.map((item, index) => (
-                    <Card key={index} className="glass border-cyan/10">
-                      <CardContent className="p-6">
-                        <div className="flex justify-between items-start mb-4">
-                          <div className="text-sm text-cyan">{index+1}</div>
-                          <div className="text-sm text-muted-foreground">
-                            {item.date}
-                          </div>
-                        </div>
-                        <h4 className="text-xl font-mono font-bold mb-1">
-                          {item.title}
-                        </h4>
-                        <p className="text-muted-foreground mb-2">
-                          {item.description}
-                        </p>
-                        <p className="text-sm text-muted-foreground/70">
-                          {item.organization}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
+             <div>
+  
+</div>
             </div>
           </div>
+          <h3 className="text-2xl font-bold mb-8 text-gradient-cyan">
+    Achievements & Certifications
+  </h3>
+  {/* Changed space-y-6 to a responsive grid */}
+ <div ref={achievementsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {achievements.map((item, index) => (
+    <Card key={index} className="glass border-cyan/10 h-full">
+      <CardContent className="p-6 flex flex-col h-full">
+        <div className="flex justify-between items-start mb-4">
+          <div className="text-sm text-cyan">
+            {String(index + 1).padStart(2, '0')}
+          </div>
+          <div className="text-sm text-muted-foreground">
+            {item.date}
+          </div>
         </div>
+        <h4 className="text-xl font-mono font-bold mb-1">
+          {item.title}
+        </h4>
+        <p className="text-muted-foreground mb-4 flex-grow">
+          {item.description}
+        </p>
+        <p className="text-sm text-muted-foreground/70 mt-auto">
+          {item.organization}
+        </p>
+      </CardContent>
+    </Card>
+  ))}
+</div>
+        </div>
+        
       </div>
+      
     </Layout>
   );
 };
