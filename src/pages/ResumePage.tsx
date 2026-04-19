@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import gsap from "gsap";
 import { Download, Mail, Phone, Github, Linkedin, Globe } from "lucide-react";
 
+
 const ResumePage = () => {
   const headingRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
