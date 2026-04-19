@@ -23,6 +23,7 @@ const ResumePage = () => {
         }
       );
     }
+    
 
     if (contentRef.current) {
       gsap.fromTo(
