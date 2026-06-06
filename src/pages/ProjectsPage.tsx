@@ -31,6 +31,25 @@ const ProjectsPage = () => {
 
   const projects: Project[] = [
     {
+      title: "AlexIS (Alex Intelligent Support)",
+      description: "Intelligent customer support platform that centralizes ticket management and automates ticket assignment to improve support operations and response times.",
+      startDate: "Apr 2025",
+      endDate: "Present",
+      skills: ["Java", "Spring Boot", "React", "Next.js"],
+      repoLink: "https://github.com/mustapha-moutaki/AlexIS-Alexsys-client-support--backend",
+      frontendRepo: "https://github.com/mustapha-moutaki/AlexIS-Alexsys-client-Intelligent-support--frontend"
+    },
+    {
+      title: "MedDesk",
+      description: "Healthcare management platform focused on improving medical workflow and patient management.",
+      startDate: "2025",
+      endDate: "2025",
+      skills: [],
+      repoLink: "https://github.com/MedDesk",
+      frontendRepo: "https://github.com/MedDesk"
+
+    },
+    {
       title: "SupplyChain IX - Enterprise Management System",
       description: "A comprehensive enterprise-grade supply chain management system built with microservices architecture. Features include real-time inventory tracking, automated order processing, and advanced analytics.",
       startDate: "Jan 2025",
@@ -62,8 +81,7 @@ const ProjectsPage = () => {
       ],
       repoLink: "https://github.com/mustapha-moutaki/Client-Portal-Backend",
       frontendRepo: "https://github.com/mustapha-moutaki/Client-Portal-Frontend"
-    }
-    ,
+    },
     {
       title: "MedManager - Hospital Management System",
       description: "Developed a comprehensive hospital management system using PHP MVC - Laravel, MySQL, and AJAX for appointment booking, patient records, and healthcare platform integration.",
