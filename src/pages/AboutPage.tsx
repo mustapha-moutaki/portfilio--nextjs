@@ -40,9 +40,9 @@ const AboutPage = () => {
     },
     {
       id: "02",
-      school: "Ibn Zohr University | Agadir",
+      school: "Ibn Zohr Faculty of Sciences | Agadir",
       degree: "Physics — Electronics and Systems",
-      field: "Undergraduate Studies (Bac +1)",
+      field: "University",
       years: "Aug 2022 – May 2023",
     },
     {
@@ -56,15 +56,34 @@ const AboutPage = () => {
 
   const achievements: Achievement[] = [
     {
-      // id: "401",
-      title: " Meta Back-End Developer",
+      title: "Oracle Certified Associate, Java SE Programmer",
       description:
-        " This 9-course program prepares learners for an entry-level career as a back-end developer.",
-      date: "2025",
+        "Validates foundational knowledge of Java programming language and object-oriented concepts.",
+      date: "01 Jan 2026 – 10 Apr 2026",
+      organization: "Oracle",
+    },
+    {
+      title: "Meta Back-End Developer Specialization",
+      description:
+        "This 9-course program prepares learners for an entry-level career as a back-end developer.",
+      date: "15 May 2025 – 12 Jun 2025",
       organization: "Meta",
     },
     {
-      // id: "401",
+      title: "Mastering Advanced Spring Boot: Microservices & System Design",
+      description:
+        "Deep dive into building production-grade microservices and distributed systems with Spring Boot.",
+      date: "01 Jan 2026 – 27 Jan 2026",
+      organization: "BOORD INFINITY",
+    },
+    {
+      title: "Deploying & Scaling Spring Boot Applications on AWS",
+      description:
+        "Hands-on training on deploying, monitoring, and scaling Spring Boot applications using AWS cloud services.",
+      date: "02 Jan 2026 – 04 Feb 2026",
+      organization: "BOORD INFINITY",
+    },
+    {
       title: "Front-End Development",
       description:
         "Completed a front-end development course focused on web fundamentals and modern UI techniques.",
@@ -72,7 +91,6 @@ const AboutPage = () => {
       organization: "Great Learning",
     },
     {
-      // id: "02",
       title: "PHP for Beginners",
       description:
         "Learned the fundamentals of PHP and applied them in web development projects.",
@@ -80,7 +98,6 @@ const AboutPage = () => {
       organization: "Scrum Learning Society",
     },
     {
-      // id: "03",
       title: "Advanced Google Analytics",
       description:
         "Gained expertise in using Google Analytics for web performance tracking and decision-making.",
@@ -88,7 +105,6 @@ const AboutPage = () => {
       organization: "Google Analytics",
     },
     {
-      // id: "04",
       title: "Career Development in English",
       description:
         "Focused on communication skills and career preparation in a professional English-speaking environment.",
@@ -164,6 +180,7 @@ const AboutPage = () => {
     <Layout>
       <div className="min-h-screen w-full pb-20">
         <div className="container mx-auto px-4 py-16">
+          {/* Two-column layout: sidebar + main content */}
           <div className="flex flex-col lg:flex-row gap-16">
             <div className="lg:w-1/3">
               <div ref={headingRef}>
@@ -178,8 +195,6 @@ const AboutPage = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan/30 via-transparent to-transparent"></div>
                   <div className="absolute inset-0 flex items-center justify-center text-8xl text-muted-foreground/20 font-mono">
                  <img src="/public/images/mustapha.webp" alt="profile picture" />
-                 {/* <input type="file" src="/public/MustaphaResumeEng.pdf" /> */}
-                 {/* <iframe src="/public/MustaphaResumeEng.pdf" width="200%" height="100%"></iframe> */}
                   </div>
                 </div>
               </div>
@@ -247,47 +262,48 @@ const AboutPage = () => {
                   ))}
                 </div>
               </div>
-
-             <div>
-  
-</div>
             </div>
           </div>
-          <h3 className="text-2xl font-bold mb-8 text-gradient-cyan">
-    Achievements & Certifications
-  </h3>
-  {/* Changed space-y-6 to a responsive grid */}
- <div ref={achievementsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-  {achievements.map((item, index) => (
-    <Card key={index} className="glass border-cyan/10 h-full">
-      <CardContent className="p-6 flex flex-col h-full">
-        <div className="flex justify-between items-start mb-4">
-          <div className="text-sm text-cyan">
-            {String(index + 1).padStart(2, '0')}
-          </div>
-          <div className="text-sm text-muted-foreground">
-            {item.date}
+
+          {/* Full-width Achievements & Certifications section */}
+          <div className="mt-8">
+            <h3 className="text-2xl font-bold mb-8 text-gradient-cyan">
+              Achievements &amp; Certifications
+            </h3>
+            <div
+              ref={achievementsRef}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            >
+              {achievements.map((item, index) => (
+                <Card key={index} className="glass border-cyan/10 h-full">
+                  <CardContent className="p-6 flex flex-col h-full">
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="text-sm text-cyan">
+                        {String(index + 1).padStart(2, '0')}
+                      </div>
+                      <div className="text-sm text-muted-foreground text-right">
+                        {item.date}
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-mono font-bold mb-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-muted-foreground mb-4 flex-grow text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                    <p className="text-sm text-cyan/70 mt-auto font-medium">
+                      {item.organization}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
-        <h4 className="text-xl font-mono font-bold mb-1">
-          {item.title}
-        </h4>
-        <p className="text-muted-foreground mb-4 flex-grow">
-          {item.description}
-        </p>
-        <p className="text-sm text-muted-foreground/70 mt-auto">
-          {item.organization}
-        </p>
-      </CardContent>
-    </Card>
-  ))}
-</div>
-        </div>
-        
       </div>
-      
     </Layout>
   );
 };
 
 export default AboutPage;
+
