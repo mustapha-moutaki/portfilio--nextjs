@@ -31,11 +31,25 @@ const ExperiencePage = () => {
       period: "2025 - PRESENT",
       experiences: [
         {
+          role: "Full-Stack Java/Spring Boot & React Developer",
+          company: "Alexsys Solutions",
+          location: "Casablanca",
+          startDate: "April 2025",
+          endDate: "Present",
+          description: [
+            "Development of AlexIS (Intelligent Support), a centralized platform for managing customer support tickets.",
+            "Implementation of an intelligent automatic assignment engine to optimize ticket processing and distribution."
+          ],
+          skills: [
+            "Java", "Spring Boot", "React", "Next.js", "RESTful APIs", "Full-Stack Development", "DDD", "Design Patterns", "Microservices", "MySQL", "PostgreSQL", "MongoDB", "JWT", "Spring Security", "RESTful APIs", "GraphQL", "JWT", "MySQL", "PostgreSQL", "MongoDB", "Docker", "Jenkins", "CI/CD", "JUnit", "Mockito"
+          ]
+        },
+        {
           role: "JAVA & ANGULAR DEVELOPER",
-          company: "Your Company",
-          location: "Location",
-          startDate: "2024",
-          endDate: "PRESENT",
+          company: "YouCode",
+          location: "Youssoufia",
+          startDate: "JANVIER 2025",
+          endDate: "AVRIL 2025",
           description: [
             "Built enterprise applications using Java Spring Boot and Angular framework.",
             "Implemented RESTful APIs and GraphQL endpoints for seamless data integration.",
