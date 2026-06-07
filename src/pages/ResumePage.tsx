@@ -49,12 +49,12 @@ const ResumePage = () => {
               <h2 className="text-3xl text-muted-foreground">Professional Profile</h2>
             </div>
             <div className="flex gap-3">
-              <a href="/public/MustaphaResumeEng.pdf" download="Mustapha_Moutaki_Resume_EN.pdf" style={{textDecoration: 'none'}}>
+              <a href="https://collection.cloudinary.com/df1wxfrxu/13e60d9fe9e82fbc8d10458de01b0510" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10 hover:border-cyan/40 transition-all duration-300">
                   <Download className="mr-2 h-4 w-4" /> Download EN
                 </Button>
               </a>
-              <a href="/public/MustaphaResumeFr.pdf" download="Mustapha_Moutaki_Resume_FR.pdf" style={{textDecoration: 'none'}}>
+              <a href="https://collection.cloudinary.com/df1wxfrxu/df903f321878f34246eadcb6cfb724c4" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none'}}>
                 <Button variant="outline" className="border-cyan/20 hover:bg-cyan/10 hover:border-cyan/40 transition-all duration-300">
                   <Download className="mr-2 h-4 w-4" /> Download FR
                 </Button>
@@ -225,6 +225,21 @@ const ResumePage = () => {
                   <div className="glass p-6 rounded-lg border border-cyan/10 hover:border-cyan/30 transition-all duration-300">
                     <div className="flex justify-between items-start mb-3 flex-wrap gap-2">
                       <div>
+                        <h4 className="font-bold text-lg">Full-Stack Java/Spring Boot & React Developer</h4>
+                        <p className="text-cyan font-medium">Alexsys Solutions</p>
+                        <p className="text-sm text-muted-foreground">Casablanca</p>
+                      </div>
+                      <Badge className="bg-cyan/10 text-cyan border-cyan/30">April 2025 - Present</Badge>
+                    </div>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-2">
+                      <li>Development of AlexIS (Intelligent Support), a centralized platform for managing customer support tickets.</li>
+                      <li>Implementation of an intelligent automatic assignment engine to optimize ticket processing and distribution.</li>
+                    </ul>
+                  </div>
+
+                  <div className="glass p-6 rounded-lg border border-cyan/10 hover:border-cyan/30 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-3 flex-wrap gap-2">
+                      <div>
                         <h4 className="font-bold text-lg">Full-Stack Developer</h4>
                         <p className="text-cyan font-medium">Digital Partnership Group</p>
                         <p className="text-sm text-muted-foreground">Casablanca, Morocco</p>
@@ -244,6 +259,40 @@ const ResumePage = () => {
               <section>
                 <h3 className="text-2xl font-bold mb-6 text-gradient-cyan">Key Projects</h3>
                 <div className="space-y-6">
+                  <div className="glass p-6 rounded-lg border border-cyan/10 hover:border-cyan/30 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-3 flex-wrap gap-2">
+                      <h4 className="font-bold text-lg">AlexIS (Alex Intelligent Support)</h4>
+                      <Badge className="bg-cyan/10 text-cyan border-cyan/30">Apr 2025 - Present</Badge>
+                    </div>
+                    <p className="text-muted-foreground mb-4">
+                      Intelligent customer support platform that centralizes ticket management and automates ticket assignment to improve support operations and response times.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {["Java", "Spring Boot", "React", "Next.js"].map((tech) => (
+                        <Badge key={tech} variant="outline" className="bg-cyan/5 border-cyan/20 text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="glass p-6 rounded-lg border border-cyan/10 hover:border-cyan/30 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-3 flex-wrap gap-2">
+                      <h4 className="font-bold text-lg">MedDesk</h4>
+                      <Badge className="bg-cyan/10 text-cyan border-cyan/30">2025</Badge>
+                    </div>
+                    <p className="text-muted-foreground mb-4">
+                      Healthcare management platform focused on improving medical workflow and patient management.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {[].map((tech) => (
+                        <Badge key={tech} variant="outline" className="bg-cyan/5 border-cyan/20 text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
                   <div className="glass p-6 rounded-lg border border-cyan/10 hover:border-cyan/30 transition-all duration-300">
                     <div className="flex justify-between items-start mb-3 flex-wrap gap-2">
                       <h4 className="font-bold text-lg">SupplyChainX</h4>
