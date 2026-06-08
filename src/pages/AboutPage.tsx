@@ -193,9 +193,13 @@ const AboutPage = () => {
               <div className="mb-8">
                 <div className="glass w-full aspect-square relative overflow-hidden rounded-lg">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan/30 via-transparent to-transparent"></div>
-                  <div className="absolute inset-0 flex items-center justify-center text-8xl text-muted-foreground/20 font-mono">
-                 <img src="https://res.cloudinary.com/df1wxfrxu/image/upload/v1780956405/profile_txcik8.jpg" alt="profile picture" />
-                  </div>
+                 <div className="w-80 h-60">
+  <img
+    src="/image.jpg"
+    alt=""
+    className="w-full h-full object-cover"
+  />
+</div>
                 </div>
               </div>
 
