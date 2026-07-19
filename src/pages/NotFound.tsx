@@ -1,9 +1,11 @@
 
+
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { AlertCircle, Home } from "lucide-react";
+
 
 const NotFound = () => {
   const location = useLocation();
